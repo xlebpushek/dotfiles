@@ -1,4 +1,4 @@
-<h2> This repository is my Linux operating system configuration (arch + bspwm). </h2>
+<!-- <h2> This repository is my Linux operating system configuration (arch + bspwm). </h2>
 
 <h3> Foreword and excuses: </h3>
 <h4> Why Linux? </h4>
@@ -18,17 +18,9 @@ Many people find it very unreasonable to add unnecessary folders to standard pat
 
 <h4> Why am I using fork picom and not the official package? </h4>
 Because I was never able to achieve rounded corners using the official package, fork supports this out of the box.
-<br><br>
-<!-- <h1 align="center">Preview</h1> -->
-<p>
-  <h3 align="center">Launch menu (rofi)</h3>
-  <img src="assets/preview/rofi/launch.png">
-  <h3 align="center">Power menu (rofi)</h3>
-  <img src="assets/preview/rofi/power.png">
-</p>
-<br><br><br><br><br><br>
 
-<!-- #### What am I using in my configuration?
+<h3> What am I using in my configuration? </h3>
+
 * Distribution: [arch linux](https://wiki.archlinux.org/title/Installation_guide)
 
 * Display manager: [lightdm](https://wiki.archlinux.org/title/LightDM)
@@ -53,5 +45,4 @@ Because I was never able to achieve rounded corners using the official package, 
 * Font: [JetBrains Mono](https://archlinux.org/packages/community/any/ttf-jetbrains-mono/)
 
 * Audio: [spotify](https://wiki.archlinux.org/title/Spotify)
-* Image: [feh](https://wiki.archlinux.org/title/feh)
- -->
+* Image: [feh](https://wiki.archlinux.org/title/feh) -->
