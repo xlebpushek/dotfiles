@@ -1,0 +1,13 @@
+#! /bin/sh
+
+function get {
+    if [ -f "$HOME/Images/wallpapers/lock.png" ]
+    then
+        local wallpaper="$HOME/Images/wallpapers/lock.png"
+    else
+        local wallpaper="$HOME/.config/i3lock/scripts/wallpaper/assets/image/lock.png"
+    fi
+    echo "${wallpaper}"
+}
+
+wallpaper=$(get)

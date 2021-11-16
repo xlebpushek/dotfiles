@@ -1,0 +1,60 @@
+env:
+    TERM: xterm-256color
+
+window:
+  padding:
+    x: 30
+    y: 30
+
+background_opacity: 0.9
+
+colors:
+  primary:
+    background: '#061115'
+    foreground: '#d9d7d6'
+  normal:
+    black:   '#fbf1c7'
+    red:     '#cc241d'
+    green:   '#98971a'
+    yellow:  '#d79921'
+    blue:    '#458588'
+    magenta: '#b16286'
+    cyan:    '#689d6a'
+    white:   '#7c6f64'
+  bright:
+    black:   '#928374'
+    red:     '#9d0006'
+    green:   '#79740e'
+    yellow:  '#b57614'
+    blue:    '#076678'
+    magenta: '#8f3f71'
+    cyan:    '#427b58'
+    white:   '#3c3836'
+
+font:
+  normal:
+    family: JetBrains Mono
+    style: Regular
+
+  bold:
+    family: JetBrains Mono
+    style: Bold
+
+  italic:
+    famaly: JetBrains Mono
+    style: Italic
+
+  bold_italic:
+    family: JetBrains Mono
+    style: Regular Italic
+
+  size: 9.5
+
+cursor:
+  style: Beam
+
+key_bindings:
+  - { key: V, mods: Control, action: Paste}
+  - { key: C, mods: Control, action: Copy }
+
+live_config_reload: true

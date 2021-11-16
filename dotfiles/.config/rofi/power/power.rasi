@@ -1,0 +1,58 @@
+configuration {
+    font: "JetBrains Mono 12.5";
+    sidebar-mode: false;
+    disable-history: false;
+}
+
+@theme "/dev/null"
+
+* {
+    background: #061115;
+    foreground: #d9d7d6;
+    accent: #0e1a20;
+
+    background-color: @background;
+    text-color: @foreground;
+}
+
+window {
+    transparency: "real";
+    width: 40%;
+}
+
+mainbox {
+    orientation: horizontal;
+    children: [ photo, listview ];
+}
+
+photo {
+    background-image: url("~/.config/rofi/power/assests/image/background.png");
+    expand: false;
+    padding: 0 0 0 15%;
+}
+
+listview {
+    columns: 1;
+    lines: 5;
+    cycle: false;
+    dynamic: true;
+    padding: 2.5% 1.5%;
+}
+
+element {
+    orientation: vertical;
+    border-radius: 8px;
+}
+
+element-text {
+    expand: true;
+    vertical-align: 0.5;
+    padding: 2% 3%;
+    background-color: inherit;
+    text-color: inherit;
+}
+
+element selected {
+    background-color: @accent;
+    border-radius: 8px;
+}

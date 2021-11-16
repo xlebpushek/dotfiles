@@ -1,0 +1,29 @@
+#!/usr/bin/sh
+
+shutdown="Shutdown"
+reboot="Reboot"
+lock="Lock"
+suspend="Suspend"
+logout="Logout"
+options="${shutdown}\n${reboot}\n${lock}\n${suspend}\n${logout}"
+theme="$HOME/.config/rofi/power/power.rasi"
+
+selection="$(echo -e "${options}" | rofi -dmenu -config ${theme})"
+case ${selection} in
+    $shutdown)
+        poweroff
+				;;
+    $reboot)
+        reboot
+        ;;
+    $lock)
+        sh "$HOME/.config/i3lock/i3lockrc"
+        ;;
+    $suspend)
+        pulsemixer --mute
+        suspend
+        ;;
+    $logout)
+        bspc quit
+        ;;
+esac
