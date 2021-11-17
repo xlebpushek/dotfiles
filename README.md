@@ -29,7 +29,7 @@
 * Run the installation script in autoinstall mode <br>
 `sh ~/dotfiles/assets/building/installation auto`
 
-**Professional installation is also supported. More details from a professional installation [here](https://github.com/xlebpushek/dotfiles/wiki/Installing)**
+**Professional installation is also supported. More details from a professional installation [here](https://github.com/xlebpushek/dotfiles/wiki/Installing#installation-in-professional-mode)**
 
 ### Help wanted
 
