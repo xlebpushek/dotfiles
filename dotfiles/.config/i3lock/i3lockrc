@@ -1,9 +1,9 @@
-#!/bin/sh
+#! /bin/sh
 
-source "$HOME/.config/i3lock/scripts/wallpaper/wallpaperrc"
-background=${wallpaper}
+
 foreground="ffffff"
 alfa="00000000"
+
 font="JetBrains Mono"
 
 i3lock \
@@ -18,7 +18,7 @@ i3lock \
 --bshl-color="${alfa}" \
 --separator-color="${alfa}" \
 \
---image=$background \
+--image=".config/i3lock/assets/image/wallpaper.png" \
 \
 --time-str="%H:%M" \
 --time-color="$foreground" \

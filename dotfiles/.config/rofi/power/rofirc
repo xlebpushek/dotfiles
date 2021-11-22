@@ -1,4 +1,5 @@
-#!/usr/bin/sh
+#! /bin/sh
+
 
 shutdown="Shutdown"
 reboot="Reboot"
@@ -6,9 +7,9 @@ lock="Lock"
 suspend="Suspend"
 logout="Logout"
 options="${shutdown}\n${reboot}\n${lock}\n${suspend}\n${logout}"
-theme="$HOME/.config/rofi/power/power.rasi"
-
+theme="$HOME/.config/rofi/power/assets/themes/theme.rasi"
 selection="$(echo -e "${options}" | rofi -dmenu -config ${theme})"
+
 case ${selection} in
     $shutdown)
         poweroff

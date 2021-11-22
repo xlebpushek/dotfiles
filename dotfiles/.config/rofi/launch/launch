@@ -1,4 +1,0 @@
-#!/usr/bin/sh
-
-theme="$HOME/.config/rofi/launch/launch.rasi"
-rofi -config ${theme} -show

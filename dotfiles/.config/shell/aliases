@@ -1,5 +1,3 @@
-#! /bin/sh
-
 ## Editor
 # Launching the editor
 alias edit='nvim'

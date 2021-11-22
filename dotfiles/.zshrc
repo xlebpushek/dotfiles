@@ -1,3 +1,13 @@
+#! /bin/sh
+
+
+### oh-my-posh settings
+
+## Promt
+# Crumbs (custom theme)
+eval "$(oh-my-posh --init --shell zsh --config "$HOME/.config/shell/promt/crumbs/theme.omp.json")"
+
+
 ### Zsh settings
 
 ## Aliases

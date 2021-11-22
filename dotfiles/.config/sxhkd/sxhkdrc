@@ -1,11 +1,9 @@
-#! /bin/sh
-
 ### Modification
 
 ## Light
 # Screen
 XF86MonBrightness{Down,Up}
-    sudo xbacklight {-,+}10 && sh $HOME/.config/dunst/scripts/brightness/brightness
+    brightnessctl set 10{-,+}% && sh $HOME/.config/dunst/scripts/brightness/brightness
 
 ## Sound
 # Speakers | headphones
@@ -14,11 +12,6 @@ XF86Audio{Lower,Raise}Volume
 XF86AudioMute
     pulsemixer --toggle-mute && sh $HOME/.config/dunst/scripts/volume/volume
 
-## Screen capture
-# Screenshot
-# Screencust
-Print
-    flameshot gui
 
 ### Basic
 
@@ -28,7 +21,7 @@ super + t
     {alacritty}
 # Launcher, power menu theme swither
 super + {m,p}
-    {sh $HOME/.config/rofi/launch/launch, sh $HOME/.config/rofi/power/power}
+    sh {$HOME/.config/rofi/launch/rofirc, $HOME/.config/rofi/power/rofirc}
 # Browser
 super +  b
     {firefox}
@@ -52,3 +45,6 @@ super + shift + {Up,Down,Left,Right}
 # Make sxhkd reload its configuration files:
 super + alt + {s,b}
     {pkill -USR1 -x sxhkd,bspc wm -r}
+# Switch the last two desktops and all active
+super + {_, shift + } Tab
+    bspc node -f {last,next}

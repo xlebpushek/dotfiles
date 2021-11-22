@@ -18,6 +18,7 @@
 **Application launcher menu** <br><br>
 ![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/rofi/launch.png)
 
+
 ### Installation
 
 * Copy the repository to your home directory <br>
@@ -26,10 +27,9 @@
 * Make the installation file executable! <br>
 `chmod +x ~/dotfiles/assets/building/installation`
 
-* Run the installation script in autoinstall mode <br>
-`sh ~/dotfiles/assets/building/installation auto`
+* Run the installation script <br>
+`sh ~/dotfiles/assets/building/installation`
 
-**Professional installation is also supported. More details from a professional installation [here](https://github.com/xlebpushek/dotfiles/wiki/Installing#installation-in-professional-mode)**
 
 ### Help wanted
 

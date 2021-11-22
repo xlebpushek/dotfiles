@@ -31,7 +31,7 @@ mainbox {
 
 inputbar {
     children: [ prompt, entry ];
-    background-image: url("~/.config/rofi/launch/assests/image/background.png");
+    background-image: url("~/.config/rofi/launch/assets/image/wallpaper.png");
     expand: false;
     padding: 10% 1.5% 2.5% 15%;
 }
