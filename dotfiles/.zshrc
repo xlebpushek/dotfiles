@@ -11,7 +11,8 @@ eval "$(oh-my-posh --init --shell zsh --config "$HOME/.config/shell/promt/crumbs
 ### Zsh settings
 
 ## Aliases
-source "$HOME/.config/shell/aliases"
+# Basic
+source "$HOME/.config/shell/aliases/basic"
 
 ## History
 # Set history size

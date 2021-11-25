@@ -8,18 +8,12 @@ path="$(dirname $(readlink -e ${0}))"
 slice="/assets/building"
 
 root="${path%%${slice}}"
-# echo "${root}"
 
 
 function backup() {
   if [[ -f "$HOME/.zshrc" ]]
   then
     mv "$HOME/.zshrc" "$HOME/.zshrc.backup"
-  fi
-
-  if [[ -f "$HOME/.bashrc" ]]
-  then
-    mv "$HOME/.bashrc" "$HOME/.bashrc.backup"
   fi
 
   if [[ -d "$HOME/.config" ]]
@@ -31,17 +25,15 @@ function backup() {
 function configuration() {
     local home="${root}/dotfiles"
 
-    cp -r "${home}/.config/ $HOME/.config/"
-    cp "${home}/.zshrc $HOME/.zshrc"
+    cp -r "${home}/.config/" "$HOME/.config/"
+    cp "${home}/.zshrc" "$HOME/.zshrc"
 }
 
 function main() {
-    echo -e "[${BYellow}*${reset}] A backup copy of the modified files is created .."
     backup
-    echo -e "[${BGreen}*${reset}] Modified files have been backed up.\n"
-    echo -e "[${BYellow}*${reset}] Copying dotfiles to home directory .."
+    echo -e "[${BGreen}*${reset}] Modified files have been backed up."
     configuration
     echo -e "[${BGreen}*${reset}] Dotfiles copied to home directory"
 }
 
-# main
+main
