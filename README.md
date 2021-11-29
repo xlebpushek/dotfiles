@@ -1,16 +1,19 @@
 ### Preview
 
-**Wallpaper** <br><br>
-![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/wallpapers/wallpaper.png)<br><br>
+**Desktop** <br><br>
+![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/desktop.png) <br><br>
 
-**Tiling mode** <br><br>
-![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/mode/tiling.png)<br><br>
+**Lock screen** <br><br>
+![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/lock.png) <br><br>
+
+<!-- **Tiling mode** <br><br>
+![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/mode/tiling.png) <br><br>
 
 **Floating mode** <br><br>
-![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/mode/floating.png)<br><br>
+![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/mode/floating.png) <br><br>
 
 **Full screen mode** <br><br>
-![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/mode/fullscreen.png)<br><br>
+![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/mode/fullscreen.png) <br><br> -->
 
 **Power management menu** <br><br>
 ![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/rofi/power.png) <br><br>
