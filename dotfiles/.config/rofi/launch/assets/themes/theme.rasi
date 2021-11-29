@@ -9,9 +9,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-    background: #061115;
-    foreground: #d9d7d6;
-    accent: #0e1a20;
+    background: #f6f7f8;
+    foreground: #292b2a;
 
     background-color: @background;
     text-color: @foreground;
@@ -30,8 +29,11 @@ mainbox {
 }
 
 inputbar {
-    children: [ prompt, entry ];
-    background-image: url("~/.config/rofi/launch/assets/image/wallpaper.png");
+    children: [
+        prompt,
+        entry
+    ];
+    background-image: url("~/.config/rofi/launch/assets/image/background.png");
     expand: false;
     padding: 10% 1.5% 2.5% 15%;
 }
@@ -69,7 +71,11 @@ element-text {
     text-color: inherit;
 }
 
+element-text selected {
+    text-color: @background;
+}
+
 element selected {
-    background-color: @accent;
+    background-color: @foreground;
     border-radius: 8px;
 }

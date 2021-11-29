@@ -24,7 +24,7 @@ super + {m,p}
     sh {$HOME/.config/rofi/launch/rofirc, $HOME/.config/rofi/power/rofirc}
 # Browser
 super +  b
-    {firefox}
+    {google-chrome-stable}
 
 ## Configurations
 # Focus or send to the given desktop
@@ -48,3 +48,6 @@ super + alt + {s,b}
 # Switch the last two desktops and all active
 super + {_, shift + } Tab
     bspc node -f {last,next}
+# Polybar
+super + z
+    sh $HOME/.config/polybar/scripts/autohide/autohiderc

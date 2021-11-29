@@ -28,16 +28,30 @@ bspc config normal_border_color "#b8a3bc"
 
 ## Other
 # Focusing the window under the pointer
-bspc config focus_follows_pointer	true
+bspc config focus_follows_pointer true
 
 
 ### Autostart
 
 ## Setting the desktop wallpaper
-feh --no-fehbg --bg-fill ".config/bspwm/assets/image/wallpaper.png" &
+feh --no-fehbg --bg-fill ".config/bspwm/assets/image/background.png"
 
-## Restart
-# sxhkd
-pgrep -x sxhkd > /dev/null || sxhkd &
-# picom
-pgrep -x picom > /dev/null || picom &
+## polybar
+# Null
+pgrep -x polybar > /dev/null
+# Launch
+polybar -r bar &
+# Autohide
+sh "$HOME/.config/polybar/scripts/autohide/autohiderc"
+
+## sxhkd
+# Null
+pgrep -x sxhkd > /dev/null
+# Launch
+sxhkd &
+
+## picom
+# Null
+pgrep -x picom > /dev/null
+# Lauunch
+picom &
