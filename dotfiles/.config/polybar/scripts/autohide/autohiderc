@@ -1,0 +1,26 @@
+#! /bin/sh
+
+
+function hide {
+    bspc config top_padding 0
+    polybar-msg cmd hide
+}
+
+function show {
+    polybar-msg cmd show
+    bspc config top_padding 40
+}
+
+function main {
+    if [[ $(bspc config top_padding) == 0 ]]
+    then
+        show
+        sleep 10
+        hide
+    else
+        hide
+    fi
+}
+
+
+main

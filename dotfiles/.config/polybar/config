@@ -1,0 +1,80 @@
+[colors]
+
+background = #ffffff
+foreground = #000000
+
+
+[settings]
+screenchange-reload = true
+;compositing-background = xor
+;compositing-background = screen
+;compositing-foreground = source
+;compositing-border = over
+pseudo-transparency = true
+
+
+[global/wm]
+margin-top = 0
+margin-bottom = 0
+
+
+[bar/bar]
+enable-ipc=true
+height = 30
+width = 98.8%
+offset-x = 0.6%
+offset-y = 1%
+border-size = 0
+border-color = ${colors.foreground}
+module-margin = 2
+
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 1
+
+padding=5
+
+font-0=JetBrains Mono
+
+modules-left =
+modules-center =
+modules-right = battery
+
+scroll-up = bspwn-wsnext
+scroll-down = bspwn-wsprev
+
+wm-restack = bspwm
+override-redirect = false
+
+
+type=custom/text
+content = 
+content-font=5
+content-foreground=${colors.foreground}
+content-padding=3
+click-left=launcher
+
+
+[module/battery]
+type = internal/battery
+
+; This is useful in case the battery never reports 100% charge
+full-at = 99
+
+; Use the following command to list batteries and adapters:
+; $ ls -1 /sys/class/power_supply/
+battery = BAT1
+adapter = ACAD
+
+; If an inotify event haven't been reported in this many
+; seconds, manually poll for new values.
+;
+; Needed as a fallback for systems that don't report events
+; on sysfs/procfs.
+;
+; Disable polling by setting the interval to 0.
+;
+; Default: 5
+poll-interval = 5
