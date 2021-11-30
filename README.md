@@ -1,5 +1,8 @@
 ### Preview
 
+**Pallete** <br><br>
+![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/pallete.png) <br><br>
+
 **Desktop** <br><br>
 ![Something went wrong. Image not loaded](https://github.com/xlebpushek/dotfiles/blob/main/assets/preview/desktop.png) <br><br>
 
