@@ -7,35 +7,24 @@ alfa="00000000"
 font="JetBrains Mono"
 
 i3lock \
---inside-color="${alfa}" \
---ring-color="${alfa}" \
---insidever-color="${alfa}" \
---ringver-color="${alfa}" \
---insidewrong-color="${alfa}" \
---ringwrong-color="${alfa}" \
---line-color="${alfa}" \
---keyhl-color="${alfa}" \
---bshl-color="${alfa}" \
---separator-color="${alfa}" \
+--no-unlock-indicator \
 \
---image=".config/i3lock/assets/image/wallpaper.png" \
+--ignore-empty-password \
+\
+--image=".config/i3lock/assets/image/background.png" \
+--fill \
 \
 --time-str="%H:%M" \
---time-color="$foreground" \
---time-font="$font" \
+--time-color="${foreground}" \
+--time-font="${font}" \
+--time-size="34" \
+\
 --date-str="%A, %m %Y" \
---date-color="$foreground" \
---date-font="$font" \
+--date-color="${foreground}" \
+--date-font="${font}" \
+--date-size="22" \
 \
 --keylayout 1 \
 --layout-color="${foreground}" \
-\
---noinput-text="Enter password .." \
-\
---verif-text="Verification .." \
---verif-color="${foreground}" \
---verif-font="${font}" \
-\
---wrong-text="Incorrect, try again .." \
---wrong-color="${foreground}" \
---wrong-font="$font" \
+--layout-font="${font}" \
+--layout-size="18" \
