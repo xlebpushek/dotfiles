@@ -1,0 +1,33 @@
+#! /bin/sh
+
+
+function data() {
+
+    current=$(brightnessctl get)
+    max=$(brightnessctl max)
+
+    brightness=$(( ${current} * 100 / ${max} ))
+    
+    echo "${brightness}"
+
+}
+
+function icons() {
+
+    path="${HOME}/.config/dunst/scripts/brightness/assets/icons"
+    
+    echo "${icon}"
+
+}
+
+function notification() {
+
+    DATA="$(data)"
+    ICON="$(icons)"
+    
+    dunstify -a "Brightness" -r "1" -i "${ICON}" "${DATA}"
+
+}
+
+
+notification

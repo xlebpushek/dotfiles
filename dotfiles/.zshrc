@@ -1,28 +1,44 @@
 #! /bin/sh
 
 
-### oh-my-posh settings
+### oh-my-zsh settings
 
-## Promt
-# Crumbs (custom theme)
-eval "$(oh-my-posh --init --shell zsh --config "$HOME/.config/shell/promt/crumbs/theme.omp.json")"
+## Specifying the path to the main folder
+export ZSH="$HOME/.config/shell/oh-my-zsh"
+
+## Custom theme for promt
+ZSH_THEME="crumb"
+
+## Plugins
+plugins=(
+    git
+    sudo
+    npm
+    composer
+    zsh-syntax-highlighting
+    zsh-autosuggestions
+)
+
+## Specifying the path to the main file
+source "$ZSH/oh-my-zsh.sh"
 
 
 ### Zsh settings
 
 ## Aliases
-source "$HOME/.config/shell/aliases"
+# Basic
+source "${HOME}/.config/shell/aliases/basic"
 
 ## History
-# Set history size
-export HISTSIZE=10000
-# Save history after logout
-export SAVEHIST=10000
-# Create a history file
-if [ ! -f "$HOME/.local/share/shell/history" ]
+# The size of the history in the stream
+export HISTSIZE=1000
+# The size of the saved history after exiting
+export SAVEHIST=100
+# Create a history file if it doesn't exist
+if [ ! -f "${HOME}/.local/share/shell/history" ]
 then
-    mkdir -p "$HOME/.local/share/shell"
-    touch "$HOME/.local/share/shell/history"
+    mkdir -p "${HOME}/.local/share/shell"
+    touch "${HOME}/.local/share/shell/history"
 fi
-# History file
-export HISTFILE="$HOME/.local/share/shell/history"
+# Specifying the path to the history file
+export HISTFILE="${HOME}/.local/share/shell/history"

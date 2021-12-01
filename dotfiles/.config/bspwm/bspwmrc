@@ -33,16 +33,10 @@ bspc config focus_follows_pointer true
 
 ### Autostart
 
+xsetroot -cursor_name left_ptr &
+
 ## Setting the desktop wallpaper
 feh --no-fehbg --bg-fill ".config/bspwm/assets/image/background.png"
-
-## polybar
-# Null
-pgrep -x polybar > /dev/null
-# Launch
-polybar -r bar &
-# Autohide
-sh "$HOME/.config/polybar/scripts/autohide/autohiderc"
 
 ## sxhkd
 # Null
@@ -55,3 +49,14 @@ sxhkd &
 pgrep -x picom > /dev/null
 # Lauunch
 picom &
+
+## polybar
+# Null
+pgrep -x polybar > /dev/null
+# Launch
+polybar -r bar &
+# Autohide
+sh "${HOME}/.config/polybar/scripts/autohide/autohiderc"
+
+## Greetings after loading all applications
+sh "${HOME}/.config/dunst/scripts/greetings/greetings"

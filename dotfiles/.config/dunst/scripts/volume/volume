@@ -1,0 +1,48 @@
+#! /bin/sh
+
+
+function data() {
+
+    status="$(pulsemixer --get-mute)"
+    volume="$(pulsemixer --get-volume)"
+    
+    if [[ "${#volume}" -eq 7 ]]
+    then
+        volume="${volume:4}"
+    elif [[ "${#volume}" -eq 5 ]]
+    then
+        volume="${volume:3}"
+    else
+        volume="${volume:2}"
+    fi
+    
+    if [[ "${status}" -eq "0" ]]
+    then
+        data="${volume}"
+    else
+        data="Mute"
+    fi
+    
+    echo "${data}"
+
+}
+
+function icons() {
+
+    path="${HOME}/.config/dunst/scripts/brightness/assets/icons"
+    
+    echo "${icon}"
+
+}
+
+function notification() {
+
+    DATA="$(data)"
+    ICON="$(icons)"
+    
+    dunstify -a "Volume" -r "1" -i "${ICON}" "${DATA}"
+
+}
+
+
+notification

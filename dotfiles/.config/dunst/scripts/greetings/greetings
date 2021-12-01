@@ -1,0 +1,69 @@
+#! /bin/sh
+
+
+time="$(date +%H)"
+
+
+function data() {
+
+    if [[ "${time}" -ge 0 ]] && [[ "${time}" -le 3 ]]
+    then
+        greetings="Isn't it time to go to bed?"
+    elif [[ "${time}" -ge 4 ]] && [[ "${time}" -le 11 ]]
+    then
+        greetings="Good morning ${USER}"
+    elif [[ "${time}" -ge 12 ]] && [[ "${time}" -le 15 ]]
+    then
+        greetings="Good afternoon ${USER}"
+    elif [[ "${time}" -ge 16 ]] && [[ "${time}" -le 23 ]]
+    then
+        greetings="Good evening ${USER}"
+    elif [[ "${time}" -eq 24 ]]
+    then
+        greetings="Isn't it time to go to bed?"
+    else
+        greetings="Welcome ${USER}"
+    fi
+    
+    echo "${greetings}"
+
+}
+
+function icons() {
+
+    path="${HOME}/.config/dunst/scripts/greetings/assets/icons"
+    
+    if [[ "${time}" -ge 0 ]] && [[ "${time}" -le 3 ]]
+    then
+        icon="${path}/"
+    elif [[ "${time}" -ge 4 ]] && [[ "${time}" -le 11 ]]
+    then
+        icon="${path}/"
+    elif [[ "${time}" -ge 12 ]] && [[ "${time}" -le 15 ]]
+    then
+        icon="${path}/"
+    elif [[ "${time}" -ge 16 ]] && [[ "${time}" -le 23 ]]
+    then
+        icon="${path}/"
+    elif [[ "${time}" -eq 24 ]]
+    then
+        icon="${path}/"
+    else
+        icon="${path}/"
+    fi
+    
+    echo "${icon}"
+
+}
+
+function notification() {
+
+    DATA="$(data)"
+    ICON="$(icons)"
+    
+    dunstify -a "Greetings" -r "2" -i "${ICON}" "${DATA}"
+
+}
+
+
+notification
